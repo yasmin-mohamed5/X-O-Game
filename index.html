@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Tic Tak X-O Game</title>
+    <meta name="description" content="Game for two">
+</head>
+
+<body>
+    <h1 class="center">X-O Game</h1>
+    <main>
+        <!-- scores -->
+        <section class="scores">
+            <div class="score_border">
+                <p>X player: <input id="input_X_name" type="text" placeholder="Enter your name" name="name" size="20">
+                </p>
+                <p>scoer : <span id="X_score" class="font-bold text-blue-600 text-3xl ml-2">0</span></p>
+            </div>
+            <div class="score_border">
+                <p>O player: <input id="input_O_name" type="text" placeholder="Enter your name" name="name" size="20">
+                </p>
+                <p>scoer : <span id="O_score" class="font-bold text-blue-600 text-3xl ml-2">0</span></p>
+            </div>
+        </section><br>
+        <!-- X-O game -->
+        <!-- <h1>player turn <span id="player_turn"></span></h1> -->
+        <section class="game_board">
+            <div> <input id="button1" class="get_position" data-row="0" data-col="0" type="button">
+            </div>
+            <div>
+                <input id="button2" class="get_position" data-row="0" data-col="1" type="button">
+            </div>
+            <div>
+                <input id="button3" class="get_position" data-row="0" data-col="2" type="button">
+            </div>
+            <div> <input id="button4" class="get_position" data-row="1" data-col="0" type="button">
+            </div>
+            <div>
+                <input id="button5" class="get_position" data-row="1" data-col="1" type="button">
+            </div>
+            <div>
+                <input id="button6" class="get_position" data-row="1" data-col="2" type="button">
+            </div>
+            <div> <input id="button7" class="get_position" data-row="2" data-col="0" type="button">
+            </div>
+            <div>
+                <input id="button8" class="get_position" data-row="2" data-col="1" type="button">
+            </div>
+            <div>
+                <input id="button9" class="get_position" data-row="2" data-col="2" type="button">
+            </div>
+        </section>
+        <!-- reset and replay -->
+        <section class="reset_replay_btn">
+            <div><input class="buttons" id="reset_button" type="button" value="reset"></div>
+            <div><input class="buttons" id="replay_button" type="button" value="replay"></div>
+            <button class="buttons" id="start_game_button">start</button>
+        </section>
+    </main>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
