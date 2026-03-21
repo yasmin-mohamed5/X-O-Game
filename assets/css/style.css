@@ -29,21 +29,19 @@ body {
     padding: 2rem;
 }
 
+
+main {
+    width: 100%;
+    max-width: 800px;
+}
+
 h1.center {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, #60a5fa, #3b82f6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent-blue);
     text-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-}
-
-main {
-    width: 100%;
-    max-width: 800px;
 }
 
 .scores {
@@ -88,10 +86,8 @@ main {
     border-radius: 8px;
     font-size: 1rem;
     margin-top: 0.5rem;
-    width: 100%;
     max-width: 200px;
     transition: all 0.2s;
-    outline: none;
 }
 
 .score_border input[type="text"]:focus {
@@ -111,7 +107,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin: 0 auto 2rem;
+    margin: auto;
     background: var(--surface-color);
     padding: 20px;
     border-radius: 20px;
@@ -134,8 +130,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: none;
-    font-family: 'Inter', sans-serif;
 }
 
 .get_position:hover {
@@ -194,63 +188,6 @@ main {
     border-color: transparent;
 }
 
-/* Modal / Popup Styles */
-#popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background: var(--surface-color);
-    padding: 3rem;
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    transform: scale(0.9);
-    animation: popupIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-@keyframes popupIn {
-    to {
-        transform: scale(1);
-    }
-}
-
-#winnerMessage {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--accent-blue);
-    margin-bottom: 2rem;
-    text-shadow: 0 0 20px var(--accent-blue-glow);
-}
-
-#closePopup {
-    background: var(--accent-blue);
-    color: white;
-    border: none;
-    padding: 1rem 3rem;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-#closePopup:hover {
-    background: var(--accent-blue-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px var(--accent-blue-glow);
-}
 
 @media (max-width: 768px) {
     .scores {
